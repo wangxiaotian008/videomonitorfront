@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+<link rel="stylesheet"  href="css/reset.css">
+<link rel="stylesheet"  href="font/iconfont.css">
+<style>
+html,body{height: 100%;}
+.bgimg{position:relative;width:100%;height:100%;min-width:1000px;min-height:960px;background:url("images/login_bg.jpg") no-repeat center center;}
+.loginframe{position:absolute;top:50%;right:6.5%;width:445px;height:707px;margin:-353px 0 0 0;background:url("images/login_kuang.png");background-size:cover}
+.loginframe li input{background:url("images/inputimg.png") no-repeat;width:383px;height:61px;border:0;padding-left:58px;color:white;font-size:20px;}
+.loginframe .usernamebox{position:relative;width:353px;height:61px;top:130px;left:30px}
+.loginframe .leftimg{width:57px;height:61px;position:absolute;z-index:5;font-size:40px;line-height:61px;padding-left:8px;left: 0;color:white}
+.loginframe .passwordbox{position:relative;width:353px;height:61px;top:161px;left:30px}
+.loginframe .verifybox{position:relative;width:224px;height:61px;top:191px;left:30px;}
+.loginframe .verifybox input{background:url("images/inputimg_yzm.png") no-repeat;}
+.loginframe .verifybox .verifycode{position:relative;width:120px;height:61px;top:-60px;left:253px;line-height: 60px;}
+.loginframe .forgetpwd{position:relative;top:205px;left:-106px}
+.loginframe .changecode{position:relative;top:205px;left:100px}
+.loginframe .loginbtn{position:relative;top:240px;left:0;width:385px;height:75px;background:#0a52e6;color:white;font-size:20px;border:none;}
+input::placeholder {font-size:18px;color:#fff;}
+input.focus::placeholder{ color:#346A71;}
+</style>
+<script>
+window.onload=function(){
+	var inputs=document.querySelectorAll('input');
+	for(var i=0;i<inputs.length;i++){
+		inputs.item(i).onfocus=function(){ this.className='focus'; }
+		inputs.item(i).onblur=function(){ this.className=''; }
+	}
+}
+</script>
+</head>
+<body>
+<div class="bgimg">
+    <div class="box headBox">
+        <span>视频事件智能分析系统</span>
+        <div class="timeBox">
+            <span>11:41:50</span><span>2020.10.30</span>
+        </div>
+    </div>
+    <div class="loginframe">
+        <ul>
+            <li>
+                <div class="usernamebox">
+                    <i class="iconfont leftimg">&#xe682;</i>
+                    <input value="" placeholder=" 请输入手机号/邮箱" class="username" >
+                </div>
+            </li>
+            <li>
+                <div class="passwordbox">
+                    <i class="iconfont leftimg">&#xe676;</i>
+                    <input value="" placeholder=" 请输入密码" class="username" >
+                </div>
+            </li>
+            <li>
+                <div class="verifybox" style="width: 224px;">
+                    <i class="iconfont leftimg">&#xe67d;</i>
+                    <input value="" placeholder=" 请输入验证码" style="width: 224px; background-size: 100% 100%" class="verifyinput" >
+                    <div class="verifycode"><a href="图形验证码待做">待做图形验证码</a></div>
+                </div>
+            </li>
+            <li><a href="#" class="forgetpwd">忘记密码</a><a href="#" class="changecode">看不清，换一张</a></li>
+            <li><button class="loginbtn" type="button" value="登录">登&nbsp;录</button></li>
+            <li><a href="#" style="position: relative; top: 260px; left: 159px;">免费注册</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/m.js"></script>
+</body>
+</html>

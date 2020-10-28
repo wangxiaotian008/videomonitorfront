@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<meta content="always" name="referrer">
+<title>视频事件智能分析系统</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/index.css" />
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=77Lbo0zEDX5vPuy0ijnFBELqthQPPBSh"></script>
+<script type="text/javascript" src="js/infobox.js"></script>
+</head>
+
+<body>
+<!-- head -->
+<div class="box headBox">
+	<span>视频事件智能分析系统</span>
+	<div class="timeBox">
+    	<span>11:41:50</span><span>2020.10.30</span>
+    </div>
+</div>
+<!-- head end -->
+
+
+<div class="box clearfix eventMap">
+	<!-- left -->
+	<div class="leftBox">
+    	<div class="navBox" >
+            <a class="li" href="index.html"><span>实时动态</span></a>
+            <a class="li" href="on_line.html"><span>在线监控</span></a>
+            <a class="li on" href="javascript:;"><span>事件地图</span></a>
+        </div>
+
+        <div class="nrBox">
+            <div class="head"></div>
+            <dl class="room indexBox10">
+            	<dt class="titleBox">
+                    <a href="javascript:;" class="on">今日</a>
+                    <a href="javascript:;">本周</a>
+                    <a href="javascript:;">本月</a>
+                </dt>
+                <dd>
+                	<div><div class="eventicon icontotal"></div><b>事件总数（件）:</b></div>
+                	<span>72</span>
+                </dd>
+                <dd>
+                	<div><div class="eventicon iconprocessed"></div><b>已处理事件（件）:</b></div>
+                	<span>696</span>
+                </dd>
+                <dd>
+                	<div><div class="eventicon iconprocessing"></div><b>处理中事件（件）:</b></div>
+                	<span>72</span>
+                </dd>
+                <dd>
+                	<div><div class="eventicon iconnotprocess"></div><b>未处理事件（件）:</b></div>
+                	<span class="red">72</span>
+                </dd>
+            </dl>
+            <div class="foot"></div>
+        </div>
+
+
+    </div>
+    <div class="nrBox mapbigbox" >
+        <div class="head"></div>
+        <div class="room">
+            <div class="maptool">
+                <a class="location"></a>
+                <a class="enlarge"></a>
+                <a class="minify"></a>
+            </div>
+            <div class="mapsmallbox" id="mapsmallbox"></div>
+            <div class="monitorequipment"><span>监控设备</span><span>18600074541</span></div>
+        </div>
+        <div class="foot"></div>
+    </div>
+	<!-- center -->
+	<div class="center"></div>
+	<!-- right -->
+	<div class="right"></div>
+</div>
+
+
+<div id="eventdetail" class="nrBox eventbigdetail">
+    <div class="head"></div>
+    <img src="images/guanbi.png" class="closeBtn" onclick="closeEventDetail()" >
+    <div class="eventdetail">
+        <div class="eventicon"></div>
+        <span class="eventdetailtitle">事件详情</span>
+        <div class="eventdetailperson">
+            <img src="images/person.jpg" class="headICO">
+            <div class="eventdetailpersoninfo">
+            	<span class="tel">18600074541</span>
+                <div class="ob">
+                    <a href="javascript:;">市民</a>
+                    <img src="images/shipin.png" class="toV">
+                    <img src="images/yuyin.png" class="toT">
+                </div>
+                <span class="time">2018-11-12 13:55:01</span>
+            </div>
+        </div>
+        <div class="eventdetailinfo">
+            <dl>
+                <dd>事件编号</dd>
+                <dd>事件类型</dd>
+                <dd>事件等级</dd>
+                <dd>事件状态</dd>
+            </dl>
+            <dl>
+                <dd>XPZ189656110</dd>
+                <dd>火灾</dd>
+                <dd>Ⅰ级别（特大）</dd>
+                <dd style="color: #a48c38">处理中</dd>
+            </dl>
+        </div>
+        <img src="images/test.jpg" class="newsImg">
+    </div>
+
+    <div class="eventprocesspercent">
+        <div class="eventicon"></div>
+        <span class="eventprocesspercenttitle">处理进度</span>
+        <div class="eventprocesspercentbody">
+            <dl>
+               <dd>
+                   <div class="box1">
+                       <span>10.21</span>
+                       <span>11:12:23</span>
+                   </div>
+                   <div class="box2">
+                       <h3>事件类型</h3>
+                       <h3>受理中</h3>
+                       <div class="shouliImgList">
+                       		<div><img src="images/tu111.jpg"><span></span></div>
+                       		<div><img src="images/tu111.jpg" alt=""><span></span></div>
+                       		<div class="addNum"><img src="images/tu111.jpg" alt=""><span>+2</span></div>
+                       </div>
+                   </div>
+               </dd>
+                <dd>
+                    <div class="box1">
+                        <h3>10.21</h3>
+                        <h3>11:12:23</h3>
+                    </div>
+
+                    <div class="box2">
+                        <h3>进度项4</h3>
+                        <h3>已处理 处理说明：被说明人均为直接人勿需签字，间接人员需签字确认</h3>
+                    </div>
+                </dd>
+                <dd>
+                    <div class="box1">
+                        <h3>10.21</h3>
+                        <h3>11:12:23</h3>
+                    </div>
+
+                    <div class="box2">
+                        <h3>进度项4</h3>
+                        <h3>已处理</h3>
+                    </div>
+                </dd>
+                <dd>
+                    <div class="box1">
+                        <h3>10.21</h3>
+                        <h3>11:12:23</h3>
+                    </div>
+
+                    <div class="box2">
+                        <h3>进度项2</h3>
+                        <h3>已处理 处理说明：事业很不稳定又要把大量的时间和精力放到工作上</h3>
+                    </div>
+                </dd>
+
+            </dl>
+        </div>
+    </div>
+
+    <div class="foot"></div>
+</div>
+
+
+<!--<div id="unprocessed" class="nrBox unprocessed">-->
+<!--    <div class="head"></div>-->
+<!--	<dl class="room">-->
+<!--        <dt class="titleBox">-->
+<!--            <span>未处理</span>-->
+<!--        </dt>-->
+<!--        <dd><span>事件编号</span><span>XPZ189656110</span></dd>-->
+<!--        <dd><span>事件类型</span><span>火灾</span></dd>-->
+<!--        <dd><span>事件等级</span><span>I级别（特大）</span></dd>-->
+<!--        <dd><span>事件地点</span><span>长沙市创谷广告产业园</span></dd>-->
+<!--        <dd class="box"><a href="javascript:;" onclick="closeUnprocessed()" >事件地点</a></dd>-->
+<!--	</dl>-->
+<!--    <div class="foot"></div>-->
+<!--</div>-->
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/m.js"></script>
+<script type="text/javascript" src="js/divmove.js"></script>
+</body>
+<script type="text/javascript">
+var map = new BMap.Map("mapsmallbox"); // 创建地图实例
+var point = new BMap.Point(116.404, 39.915); // 创建中心点坐标
+map.centerAndZoom(point, 15);
+map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+
+var myIcon = new BMap.Icon("/studyTest/images/notdeal.png", new BMap.Size(48, 48), {
+  // 指定定位位置。
+  // 当标注显示在地图上时，其所指向的地理位置距离图标左上
+  // 角各偏移10像素和25像素。您可以看到在本例中该位置即是
+  // 图标中央下端的尖角位置。
+  anchor: new BMap.Size(10, 25),
+  // 设置图片偏移。
+  // 当您需要从一幅较大的图片中截取某部分作为标注图标时，您
+  // 需要指定大图的偏移位置，此做法与css sprites技术类似。
+  imageOffset: new BMap.Size(0, 0)   // 设置图片偏移
+});
+// 创建标注对象并添加到地图
+var marker = new BMap.Marker(point, {icon: myIcon});
+map.addOverlay(marker);
+
+var html = [`<div id="unprocessed" class="nrBox unprocessed">
+    <div class="head"></div>
+    <dl class="room">
+        <dt class="titleBox">
+            <span>未处理</span>
+        </dt>
+        <dd><span>事件编号</span><span style="">XPZ189656110</span></dd>
+        <dd><span>事件类型</span><span>火灾</span></dd>
+        <dd><span>事件等级</span><span>I级别（特大）</span></dd>
+        <dd><span>事件地点</span><span>长沙市创谷广告产业园</span></dd>
+        <dd class="box"><a href="javascript:;" onclick="closeUnprocessed()" >事件地点</a></dd>
+        </dl>
+    <div class="foot"></div>
+</div>`];
+var infoBox = new BMapLib.InfoBox(map,html.join(""),{
+  enableAutoPan: true
+  ,align: INFOBOX_AT_BOTTOM
+  ,offset: new BMap.Size(20,20)
+});
+
+marker.enableDragging();
+marker.addEventListener("click", function(){
+  console.log("infobox");
+  if(document.getElementById('unprocessed') != null){
+    document.getElementById('unprocessed').style.display="block";
+    return;
+  }
+  infoBox.open(marker);
+
+})
+
+  function closeEventDetail() {
+    console.log("aa");
+    document.getElementById('eventdetail').style.display="none";
+  }
+function closeUnprocessed(){
+  console.log("bb");
+  document.getElementById('unprocessed').style.display="none";
+}
+
+
+
+</script>
+</html>
