@@ -264,7 +264,7 @@ var INFOBOX_AT_TOP = 1, INFOBOX_AT_RIGHT = 2, INFOBOX_AT_BOTTOM = 3, INFOBOX_AT_
       this._opts.boxClass = opts.boxClass || "infoBox";
       this._opts.boxStyle = opts.boxStyle || {};
       this._opts.closeIconMargin = opts.closeIconMargin || "2px";
-      this._opts.closeIconUrl = opts.closeIconUrl || "close.png";
+      this._opts.closeIconUrl = opts.closeIconUrl?opts.closeIconUrl:"";
       this._opts.enableAutoPan = opts.enableAutoPan  ? true : false;
       this._opts.align = opts.align || INFOBOX_AT_TOP;
     }

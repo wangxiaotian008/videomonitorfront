@@ -4,7 +4,7 @@ var cur = {
   y:0
 }
 var nx,ny,dx,dy,x,y ;
-function down(){
+function down(div2){
   flag = true;
   var touch ;
   if(event.touches){
@@ -17,7 +17,7 @@ function down(){
   dx = div2.offsetLeft;
   dy = div2.offsetTop;
 }
-function move(){
+function move(div2){
   if(flag){
     var touch ;
     if(event.touches){
@@ -37,22 +37,3 @@ function move(){
     },false);
   }
 }
-var div2 = document.getElementById("eventdetail");
-div2.addEventListener("mousedown",function(){
-  down();
-},false);
-div2.addEventListener("touchstart",function(){
-  down();
-},false)
-div2.addEventListener("mousemove",function(){
-  move();
-},false);
-div2.addEventListener("touchmove",function(){
-  move();
-},false)
-document.body.addEventListener("mouseup",function(){
-  flag = false;
-},false);
-div2.addEventListener("touchend",function(){
-  flag = false;
-},false)

@@ -139,7 +139,7 @@
 .mapsmallbox{width: 1365px;height: 863px;border: 2px solid;background: url('../images/map.jpg');}
 .mapbigbox{position:relative;float:left;margin-left:24px;background-size:50%}
 .mapbigbox .room{padding:34px 24px 24px 23px ;}
-.eventbigdetail{position: absolute;top:313px;left:736px;height:548px;width:880px;z-index:5;background:#04161e;border-radius: 17px 31px 0px 17px;}
+.eventbigdetail{position: absolute;height:548px;width:880px;z-index:5;background:#04161e;border-radius: 17px 31px 0px 17px;}
 .maptool{width:145px;height:58px;background:url(../images/dwgnbj.png) no-repeat;position:absolute;top:35px;left:40px;background-size:100% 100%;z-index:5}
 .maptool .location{background:url(../images/dingwei.png) no-repeat;position:absolute;top:50%;left:50%;width:25px;height:25px;background-size:cover;transform:translate(-50px,-50%);cursor:pointer}
 .maptool .enlarge{background:url(../images/fangda.png) no-repeat;position:absolute;top:50%;left:50%;width:25px;height:25px;background-size:cover;transform:translate(-15px,-50%);cursor:pointer}
@@ -192,5 +192,6 @@
 .unprocessed .box{text-align: center;padding-left:0;line-height: 30px;padding-top:12px;}
 .unprocessed .box a{display: inline-block;width: 96px;height: 32px;background-color:rgba(127, 255, 254, 0.2);border:solid 1px #40CDDC;font-size: 16px;color: #40CDDC; border-radius:16px;}
 .unprocessed .box a:hover{border-color:#fff;color:#fff;}
+.eventdetailposition {top: 156px;left: 240px;}
 
 
