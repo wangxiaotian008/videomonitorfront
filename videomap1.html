@@ -8,7 +8,6 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=3.0&ak=77Lbo0zEDX5vPuy0ijnFBELqthQPPBSh"></script>
-    <script type="text/javascript" src="js/infobox.js"></script>
 </head>
 
 <body>
@@ -20,8 +19,6 @@
     </div>
 </div>
 <!-- head end -->
-
-
 <div class="box clearfix eventMap">
     <!-- left -->
     <div class="leftBox">
@@ -60,6 +57,7 @@
         </div>
 
 
+
     </div>
     <div class="nrBox mapbigbox" >
         <div class="head"></div>
@@ -70,7 +68,7 @@
                 <a class="minify"></a>
             </div>
             <div class="mapsmallbox" id="mapsmallbox"></div>
-            <div id="monitorequipment" class="monitorequipment"><span>监控设备</span><span>18600074541</span></div>
+            <div id="monitorequipment" class="monitorequipment" style="display: none"><span>监控设备</span><span>18600074541</span></div>
         </div>
         <div class="foot"></div>
     </div>
@@ -79,72 +77,7 @@
     <!-- right -->
     <div class="right"></div>
 </div>
-
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/m.js"></script>
-<script type="text/javascript" src="js/divmove.js"></script>
-</body>
-<script type="text/javascript">
-var map = new BMap.Map("mapsmallbox"); // 创建地图实例
-var point = new BMap.Point(116.404, 39.915); // 创建中心点坐标
-map.centerAndZoom(point, 15);
-map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
-
-var weichuli = new BMap.Icon("./images/weichuli_shi.png", new BMap.Size(48, 48), {
-  imageOffset: new BMap.Size(0, 0)   // 设置图片偏移
-});
-
-// 创建标注对象并添加到地图
-var weichulimarker = new BMap.Marker(point, {icon: weichuli});
-map.addOverlay(weichulimarker);
-
-var unprocessed = [`<div id="unprocessed" style="z-index: 6" class="nrBox unprocessed">
-    <div class="head"></div>
-    <img src="images/guanbi.png" style="z-index: 7" class="closeBtn" onclick="closeUnprocessed()" >
-    <dl class="room">
-        <dt class="titleBox">
-            <span>未处理</span>
-        </dt>
-        <dd><span>事件编号</span><span style="">XPZ189656110</span></dd>
-        <dd><span>事件类型</span><span>火灾</span></dd>
-        <dd><span>事件等级</span><span>I级别（特大）</span></dd>
-        <dd><span>事件地点</span><span>长沙市创谷广告产业园</span></dd>
-        <dd class="box"><a href="javascript:;" onclick="closeUnprocessed()" >事件地点</a></dd>
-        </dl>
-    <div class="foot"></div>
-</div>`];
-
-
-var infoBox = new BMapLib.InfoBox(map,unprocessed.join(""),{
-
-  enableAutoPan: true,
-  align: INFOBOX_AT_BOTTOM,
-  offset: new BMap.Size(20,20),
-  // closeIconUrl:"./images/guanbi.png",
-  // closeIconMargin: "10px 10px 0 0",
-
-});
-
-weichulimarker.enableDragging();
-weichulimarker.addEventListener("click", function(){
-  if(document.getElementById('unprocessed') != null){
-    document.getElementById('unprocessed').style.display="block";
-  }
-  document.getElementById('monitorequipment').style.display="block";
-  infoBox.open(weichulimarker);
-
-})
-
-var yichuli = new BMap.Icon("./images/yichuli_shi.png", new BMap.Size(48, 48), {
-  imageOffset: new BMap.Size(0, 0)   // 设置图片偏移
-});
-// 创建标注对象并添加到地图
-var yichulimarker = new BMap.Marker(new BMap.Point(116.386878,39.913496), {icon: yichuli});
-
-// 创建标注对象并添加到地图
-map.addOverlay(yichulimarker);
-
-var processed = [`<div id="eventdetail" class="nrBox eventbigdetail" >
+<div id="eventdetail" style="display: none" class="nrBox eventbigdetail" >
     <div class="head"></div>
     <img src="images/guanbi.png" class="closeBtn" onclick="closeEventDetail()" >
     <div class="eventdetail">
@@ -238,64 +171,72 @@ var processed = [`<div id="eventdetail" class="nrBox eventbigdetail" >
     </div>
 
     <div class="foot"></div>
-</div>`];
+</div>
+<div id="unprocessed" style="display: none"  class="nrBox unprocessed">
+    <div class="head"></div>
+    <img src="images/guanbi.png" style="z-index: 7" class="closeBtn" onclick="closeUnprocessed()" >
+    <dl class="room">
+        <dt class="titleBox">
+            <span>未处理</span>
+        </dt>
+        <dd><span>事件编号</span><span style="">XPZ189656110</span></dd>
+        <dd><span>事件类型</span><span>火灾</span></dd>
+        <dd><span>事件等级</span><span>I级别（特大）</span></dd>
+        <dd><span>事件地点</span><span>长沙市创谷广告产业园</span></dd>
+        <dd class="box"><a href="javascript:;" onclick="closeUnprocessed()" >事件地点</a></dd>
+    </dl>
+    <div class="foot"></div>
+</div>
 
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/m.js"></script>
+<script type="text/javascript" src="js/divmove.js"></script>
+</body>
+<script type="text/javascript">
+var map = new BMap.Map("mapsmallbox"); // 创建地图实例
+var point = new BMap.Point(116.404, 39.915); // 创建中心点坐标
+map.centerAndZoom(point, 15);
+map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
 
-var yichuliinfoBox = new BMapLib.InfoBox(map,processed.join(""),{
-
-  boxStyle: {top: '156px',left: '240px'},
-  enableAutoPan: true,
-  align: INFOBOX_AT_BOTTOM,
-  offset: new BMap.Size(20,20),
-  // closeIconUrl:"./images/guanbi.png",
-  // closeIconMargin: "10px 10px 0 0",
-
+var weichuli = new BMap.Icon("./images/weichuli_shi.png", new BMap.Size(48, 48), {
+  imageOffset: new BMap.Size(0, 0)   // 设置图片偏移
 });
+
+// 创建标注对象并添加到地图
+var weichulimarker = new BMap.Marker(point, {icon: weichuli});
+map.addOverlay(weichulimarker);
+
+weichulimarker.enableDragging();
+weichulimarker.addEventListener("click", function(){
+  document.getElementById('unprocessed').style.display="block";
+  document.getElementById('eventdetail').style.display="none";
+  document.getElementById('monitorequipment').style.display="block";
+})
+
+var yichuli = new BMap.Icon("./images/yichuli_shi.png", new BMap.Size(48, 48), {
+  imageOffset: new BMap.Size(0, 0)   // 设置图片偏移
+});
+// 创建标注对象并添加到地图
+var yichulimarker = new BMap.Marker(new BMap.Point(116.386878,39.913496), {icon: yichuli});
+// 创建标注对象并添加到地图
+map.addOverlay(yichulimarker);
 
 yichulimarker.enableDragging();
 yichulimarker.addEventListener("click", function(){
-  if(document.getElementById('eventdetail') != null){
-    document.getElementById('eventdetail').style.display="block";
-  }
+  document.getElementById('eventdetail').style.display="block";
   document.getElementById('monitorequipment').style.display="block";
-  yichuliinfoBox.open(yichulimarker);
-  console.log(document.getElementById("eventdetail"));
-  var div2 = document.getElementById("eventdetail");
-  div2.addEventListener("mousedown",function(){
-    console.log(this)
-    down(this);
-  },false);
-  div2.addEventListener("touchstart",function(){
-    down(this);
-  },false)
-  div2.addEventListener("mousemove",function(){
-    move(this);
-  },false);
-  div2.addEventListener("touchmove",function(){
-    move(this);
-  },false)
-  document.body.addEventListener("mouseup",function(){
-    flag = false;
-  },false);
-  div2.addEventListener("touchend",function(){
-    flag = false;
-  },false)
-
+  document.getElementById('unprocessed').style.display="none";
 })
 
 function closeEventDetail() {
-  console.log("aa");
   document.getElementById('eventdetail').style.display="none";
   document.getElementById('monitorequipment').style.display="none";
-  console.log("clo");
 }
 function closeUnprocessed(){
-  console.log("bb");
   document.getElementById('unprocessed').style.display="none";
   document.getElementById('monitorequipment').style.display="none";
 }
 function infoboxclose() {
-  console.log('cc');
   document.getElementById('unprocessed').style.display="none";
   document.getElementById('monitorequipment').style.display="none";
 }

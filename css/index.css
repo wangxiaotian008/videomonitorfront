@@ -133,13 +133,13 @@
 
 
 /*videomap1*/
-.monitorequipment{display: none;width:163px;height:75px;background:url(../images/dwgnbj.png) no-repeat;position:absolute;bottom:49px;left:40px;background-size:100% 100%;text-align:left;line-height: 24px;}
+.monitorequipment{width:163px;height:75px;background:url(../images/dwgnbj.png) no-repeat;position:absolute;bottom:49px;left:40px;background-size:100% 100%;text-align:left;line-height: 24px;}
 .monitorequipment span{font-size: 16px;color:#4FFFFD;display: inline-block;padding:11px 0 0 16px;}
 .monitorequipment span+span{font-size:20px;color: #fff;padding:0 0 0 16px;}
 .mapsmallbox{width: 1365px;height: 863px;border: 2px solid;background: url('../images/map.jpg');}
 .mapbigbox{position:relative;float:left;margin-left:24px;background-size:50%}
 .mapbigbox .room{padding:34px 24px 24px 23px ;}
-.eventbigdetail{position: absolute;height:548px;width:880px;z-index:5;background:#04161e;border-radius: 17px 31px 0px 17px;}
+.eventbigdetail{position: absolute;top:313px;left:736px;height:548px;width:880px;z-index:5;background:#04161e;border-radius: 17px 31px 0px 17px;}
 .maptool{width:145px;height:58px;background:url(../images/dwgnbj.png) no-repeat;position:absolute;top:35px;left:40px;background-size:100% 100%;z-index:5}
 .maptool .location{background:url(../images/dingwei.png) no-repeat;position:absolute;top:50%;left:50%;width:25px;height:25px;background-size:cover;transform:translate(-50px,-50%);cursor:pointer}
 .maptool .enlarge{background:url(../images/fangda.png) no-repeat;position:absolute;top:50%;left:50%;width:25px;height:25px;background-size:cover;transform:translate(-15px,-50%);cursor:pointer}
@@ -182,16 +182,14 @@
 .eventprocesspercentbody .box2 h3{line-height:18px;font-size:16px;}
 .eventprocesspercentbody .box2 h3+h3{font-size:14px;line-height: 30px;opacity: 0.8;}
 .eventbigdetail .closeBtn{width: 44px;height: 44px;position: absolute;right: -1px;top: 6px;cursor: pointer;}
-.unprocessed{height:321px;width:283px;z-index:5;background:#04161e;border-radius: 17px 31px 0px 17px;}
+.unprocessed{position: absolute;top:687px;left:690px;height:321px;width:283px;z-index:5;background:#04161e;border-radius: 17px 31px 0px 17px;}
 .unprocessed .closeBtn{width: 44px;height: 44px;position: absolute;right: -1px;top: 6px;cursor: pointer;}
-.unprocessed .titleBox{padding-bottom:20px;padding-left: 7px}
-.unprocessed .titleBox:after{top: -17px;left: -38px}
-.unprocessed dd{line-height: 36px;text-align:left;padding-left: 8px;}
-.unprocessed dd span{font-size:16px; color: #cfdbef}
-.unprocessed dd span+span{font-size: 14px;opacity: 0.8;padding-left: 10px}
+.unprocessed .titleBox{padding-top:30px;padding-bottom:20px;}
+.unprocessed .titleBox:after{top: 13px;}
+.unprocessed dd{line-height: 36px;text-align:left;padding-left: 40px;}
+.unprocessed dd span{font-size:16px;}
+.unprocessed dd span+span{font-size: 14px;opacity: 0.8;}
 .unprocessed .box{text-align: center;padding-left:0;line-height: 30px;padding-top:12px;}
 .unprocessed .box a{display: inline-block;width: 96px;height: 32px;background-color:rgba(127, 255, 254, 0.2);border:solid 1px #40CDDC;font-size: 16px;color: #40CDDC; border-radius:16px;}
 .unprocessed .box a:hover{border-color:#fff;color:#fff;}
-.eventdetailposition {top: 156px;left: 240px;}
-
 
