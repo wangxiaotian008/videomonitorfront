@@ -133,7 +133,7 @@
 
 
 /*videomap1*/
-.monitorequipment{width:163px;height:75px;background:url(../images/dwgnbj.png) no-repeat;position:absolute;bottom:49px;left:40px;background-size:100% 100%;text-align:left;line-height: 24px;}
+.monitorequipment{display: none;width:163px;height:75px;background:url(../images/dwgnbj.png) no-repeat;position:absolute;bottom:49px;left:40px;background-size:100% 100%;text-align:left;line-height: 24px;}
 .monitorequipment span{font-size: 16px;color:#4FFFFD;display: inline-block;padding:11px 0 0 16px;}
 .monitorequipment span+span{font-size:20px;color: #fff;padding:0 0 0 16px;}
 .mapsmallbox{width: 1365px;height: 863px;border: 2px solid;background: url('../images/map.jpg');}
@@ -192,4 +192,5 @@
 .unprocessed .box{text-align: center;padding-left:0;line-height: 30px;padding-top:12px;}
 .unprocessed .box a{display: inline-block;width: 96px;height: 32px;background-color:rgba(127, 255, 254, 0.2);border:solid 1px #40CDDC;font-size: 16px;color: #40CDDC; border-radius:16px;}
 .unprocessed .box a:hover{border-color:#fff;color:#fff;}
+
 

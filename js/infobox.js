@@ -483,7 +483,7 @@ var INFOBOX_AT_TOP = 1, INFOBOX_AT_RIGHT = 2, INFOBOX_AT_BOTTOM = 3, INFOBOX_AT_
        * @return IMG 关闭按钮的HTML代码
        */
       _getCloseIcon: function(){
-        var img = "<img src='"+ this._opts.closeIconUrl +"' align='right' style='position:relative;right:0px;cursor:pointer;margin:"+ this._opts.closeIconMargin +"'/>";
+        var img = "<img id='infoboxclose' onclick='infoboxclose()' src='"+ this._opts.closeIconUrl +"' align='right' style='z-index: 10;position:relative;right:0px;cursor:pointer;margin:"+ this._opts.closeIconMargin +"'/>";
         return img;
       },
       /**
